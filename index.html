@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Timer</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="flipclock.css">
+	<style>
+		#clock{
+			position: fixed;
+			top: calc(50% - 100px);
+			left: calc(50% - 420px);
+		}
+	</style>
+</head>
+<body>
+	<div id="clock">
+		
+	</div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="flipclock.min.js"></script>
+	<script>
+		var date = new Date(2015, 5, 18);
+	    var now = new Date();
+	    var diff = (date.getTime()/1000) - (now.getTime()/1000);
+	
+	    var clock = $('#clock').FlipClock(diff,{
+	        clockFace: 'DailyCounter',
+	        countdown: true
+	    });  
+	</script>
+</body>
+</html>
